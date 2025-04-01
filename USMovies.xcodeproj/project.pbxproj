@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FED0A04B2D9C0C870076AC8F /* AsynLib in Frameworks */ = {isa = PBXBuildFile; productRef = FED0A04A2D9C0C870076AC8F /* AsynLib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FEBC62532D9AD23A0089C6EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED0A04B2D9C0C870076AC8F /* AsynLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = USMovies;
 			packageProductDependencies = (
+				FED0A04A2D9C0C870076AC8F /* AsynLib */,
 			);
 			productName = USMovies;
 			productReference = FEBC62422D9AD2390089C6EE /* USMovies.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = FEBC62392D9AD2390089C6EE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FED0A0492D9C0C870076AC8F /* XCRemoteSwiftPackageReference "AsynLib" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FEBC62432D9AD2390089C6EE /* Products */;
 			projectDirPath = "";
@@ -566,6 +575,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FED0A0492D9C0C870076AC8F /* XCRemoteSwiftPackageReference "AsynLib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/abhilashg92/AsynLib.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FED0A04A2D9C0C870076AC8F /* AsynLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FED0A0492D9C0C870076AC8F /* XCRemoteSwiftPackageReference "AsynLib" */;
+			productName = AsynLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEBC623A2D9AD2390089C6EE /* Project object */;
 }

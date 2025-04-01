@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AsynLib
 
 struct MovieView: View {
     
@@ -13,15 +14,12 @@ struct MovieView: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: movie.getThumbnailUrl())) { image in
+            AsyncImageLoader(url: URL(string: movie.getThumbnailUrl())) { image in
                 image
                     .resizable()
-                    .scaledToFill()
-            } placeholder: {
-                ProgressView()
+                    .scaledToFit()
             }
             .frame(width: 100, height: 150)
-            .background(Color.gray)
             
             VStack(alignment: .leading) {
                 Text(movie.title)
