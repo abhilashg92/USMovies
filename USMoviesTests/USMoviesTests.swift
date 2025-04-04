@@ -29,7 +29,7 @@ final class USMoviesTests: XCTestCase {
         viewModel?.query = "Test"
         await viewModel?.searchMovies()
         
-        try? await Task.sleep(nanoseconds: 200_000_000) // 0.3 seconds delay
+        try? await Task.sleep(nanoseconds: 200_000_000) // 0.2 seconds delay
         
             XCTAssertEqual(viewModel?.movies.count, 2)
             XCTAssertEqual(viewModel?.movies.first?.title, "Test1")

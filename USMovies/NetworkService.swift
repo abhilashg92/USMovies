@@ -10,11 +10,13 @@ import Foundation
 
 protocol NetworkServiceProtocol {
     func execute<T: Codable>(endpoint: Endpoint) async throws -> T
-    func fetch<T: Codable>(url: URL) async throws -> T
 }
 
 class NetworkService: NetworkServiceProtocol {
     
+    static let shared = NetworkService()
+    private init() {}
+
     func execute<T>(endpoint: any Endpoint) async throws -> T where T : Decodable, T : Encodable {
         guard let url = endpoint.url else { throw NetworkError.invalidURL }
         
@@ -33,14 +35,6 @@ class NetworkService: NetworkServiceProtocol {
         } catch {
             throw NetworkError.requestFailed(error)
         }
-    }
-    
-    static let shared = NetworkService()
-    private init() {}
-    
-    func fetch<T: Codable>(url: URL) async throws -> T {
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(T.self, from: data)
     }
 }
 

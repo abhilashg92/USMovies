@@ -9,3 +9,5 @@ xcuserdata/
 # Swift Package Manager
 /.swiftpm
 Package.resolved
+/USMovies.xcodeproj/xcshareddata
+/USMovies.xcodeproj/xcuserdata

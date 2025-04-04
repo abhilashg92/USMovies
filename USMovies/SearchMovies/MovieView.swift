@@ -30,3 +30,7 @@ struct MovieView: View {
         }
     }
 }
+
+#Preview {
+    MovieView(movie: Movie(id: 0, title: "First Movie", overview: "amkldmakls a;s djlkadjskll", posterPath: "", release_date: "23/24/23"))
+}
